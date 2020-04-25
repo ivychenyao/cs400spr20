@@ -1,0 +1,24 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to CS400 PS6: Simple Angular App!
+  </h1>
+</div>
+
+<div>
+
+  <ul>
+    <li *ngFor="let station of stations">
+      <label (click)="selectStation(station)">{{station.name}}</label>
+    </li>
+  </ul>
+
+</div>
+
+<div *ng>
+  <!-- display selected contact -->
+  <h3>Details for {{selectedStation.name}} </h3>
+  <input type="text" [(ngModel)]="selectedStation.name">
+</div>
+
+
+<router-outlet></router-outlet>
